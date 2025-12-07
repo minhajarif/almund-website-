@@ -1,3 +1,7 @@
+/* ============================================
+   BASIC RESET
+============================================ */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,20 +15,20 @@ body {
 }
 
 /* ============================================
-   NAVBAR (ALMOND THEME)
+   NAVBAR (DARK BROWN ALMOND THEME)
 ============================================ */
 
 .top-header {
   width: 100%;
   height: 70px;
-  background: #f4e1c2;              /* almond-like colour */
+  background: #3b2415;              /* dark brown */
   padding: 0 40px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  border-bottom: 1px solid #e1c397;
+  border-bottom: 1px solid #2a180d;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -38,13 +42,13 @@ body {
 }
 
 .nav-logo img {
-  height: 38px;
+  height: 42px;                     /* thoda bada */
 }
 
 .nav-logo span {
   font-size: 23px;
   font-weight: 700;
-  color: #3b2415;
+  color: #f9e7c9;                   /* light almond text */
 }
 
 /* Navbar Center Menu */
@@ -58,14 +62,14 @@ body {
 .nav-links a {
   text-decoration: none;
   font-size: 16px;
-  color: #3b2415;
+  color: #f9e7c9;
   font-weight: 500;
   transition: 0.2s;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #c04a3e;
+  color: #ffb188;                   /* hover colour */
 }
 
 /* Dropdown */
@@ -92,12 +96,12 @@ body {
   z-index: 20;
 }
 
-/* For JS: when class 'show' added */
+/* JS ke through .show add hoga */
 .dropdown-menu.show {
   display: flex;
 }
 
-/* Extra: keep open on hover (desktop) */
+/* Desktop hover ke liye */
 .nav-dropdown:hover .dropdown-menu {
   display: flex;
 }
@@ -124,16 +128,11 @@ body {
   align-items: center;
   gap: 18px;
   font-size: 14px;
+  color: #f9e7c9;
 }
 
 .nav-contact span {
   font-weight: 500;
-}
-
-/* (If someday you use logo in navbar right) */
-.nav-whatsapp img {
-  height: 32px;
-  cursor: pointer;
 }
 
 
@@ -182,14 +181,14 @@ body {
   padding: 0 40px;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);  /* first row 4, second row 3 automatically */
+  grid-template-columns: repeat(4, 1fr);  /* 1st row 4, 2nd row 3 */
   gap: 12px;
 
   position: relative;
   z-index: 50;
 }
 
-/* Each box as image card */
+/* Each box */
 .product-box {
   position: relative;
   display: block;
@@ -197,8 +196,9 @@ body {
   padding-top: 70%;              /* aspect ratio */
   border-radius: 10px;
   overflow: hidden;
-  background: #1b1b1b;           /* fallback */
-  background-size: cover;
+  background: #111;              /* fallback */
+  background-size: contain;      /* FULL image, no crop */
+  background-repeat: no-repeat;
   background-position: center;
   text-decoration: none;
   color: #fff;
@@ -213,11 +213,11 @@ body {
   bottom: 0;
 
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
 
   padding: 8px 8px;
-  background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
 }
 
 /* Hover effect */
@@ -226,39 +226,39 @@ body {
   box-shadow: 0 8px 22px rgba(0,0,0,0.25);
 }
 
-/* Background images for each product box – using your banner images */
+/* ==== Correct background images for each box ==== */
+/* 1: Afghani Almonds */
 .product-boxes a:nth-child(1) {
-  /* Afghani Almonds */
   background-image: url('images/afghani-almund-banner.png');
 }
 
+/* 2: California Almonds (mid banner) */
 .product-boxes a:nth-child(2) {
-  /* California Almonds */
   background-image: url('images/california-almund-mid-banner.png');
 }
 
+/* 3: Iranian / Irani Almonds */
 .product-boxes a:nth-child(3) {
-  /* Iranian Almonds */
   background-image: url('images/iran-almund-banner.png');
 }
 
+/* 4: Kashmiri Almonds */
 .product-boxes a:nth-child(4) {
-  /* Kashmiri Almonds */
   background-image: url('images/kashmiri-almund-banner.png');
 }
 
+/* 5: Roasted Afghani Almonds */
 .product-boxes a:nth-child(5) {
-  /* Roasted Afghani Almonds */
   background-image: url('images/roasted-afghani-banner.png');
 }
 
+/* 6: Roasted Afghani Mamra */
 .product-boxes a:nth-child(6) {
-  /* Roasted Afghani Mamra Almonds */
   background-image: url('images/roasted-afghani-mamra-banner.png');
 }
 
+/* 7: Afghani Mamra Almonds */
 .product-boxes a:nth-child(7) {
-  /* Afghani Mamra Almonds */
   background-image: url('images/Afghani-mamra-banner.jpg');
 }
 
@@ -555,7 +555,7 @@ body {
 }
 
 .footer-left img {
-  height: 48px;
+  height: 52px;                    /* footer logo thoda bada */
   margin-bottom: 10px;
 }
 
@@ -575,6 +575,7 @@ body {
   font-size: 13px;
 }
 
+
 /* ============================================
    FLOATING WHATSAPP BUTTON (FIXED BOTTOM-RIGHT)
 ============================================ */
@@ -583,8 +584,8 @@ body {
   position: fixed;
   right: 18px;
   bottom: 18px;
-  width: 46px;
-  height: 46px;
+  width: 52px;                     /* size bada */
+  height: 52px;
   border-radius: 50%;
   background: #25d366;
   display: flex;
@@ -598,6 +599,7 @@ body {
 .whatsapp-float svg {
   display: block;
 }
+
 
 /* ============================================
    RESPONSIVE
@@ -660,6 +662,6 @@ body {
   }
 
   .nav-contact {
-    display: none; /* mobile me thoda clean rakho */
+    display: none; /* mobile me clean */
   }
 }
