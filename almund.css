@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 }
 
 body {
@@ -15,20 +15,20 @@ body {
 }
 
 /* ============================================
-   NAVBAR
+   NAVBAR (ALMOND THEME)
 ============================================ */
 
 .top-header {
   width: 100%;
   height: 70px;
-  background: #ffffff;
+  background: #f4e1c2;              /* almond-like colour */
   padding: 0 40px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e1c397;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -48,7 +48,7 @@ body {
 .nav-logo span {
   font-size: 23px;
   font-weight: 700;
-  color: #c04a3e;
+  color: #3b2415;
 }
 
 /* Navbar Center Menu */
@@ -62,7 +62,7 @@ body {
 .nav-links a {
   text-decoration: none;
   font-size: 16px;
-  color: #333;
+  color: #3b2415;
   font-weight: 500;
   transition: 0.2s;
 }
@@ -83,19 +83,26 @@ body {
   top: 35px;
   left: 0;
 
-  background: white;
+  background: #ffffff;
   border: 1px solid #ddd;
-  padding: 10px 0;
+  padding: 8px 0;
   width: 220px;
 
   display: none;
   flex-direction: column;
 
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
   border-radius: 8px;
+  z-index: 20;
 }
 
+/* For JS: when class 'show' added */
 .dropdown-menu.show {
+  display: flex;
+}
+
+/* Extra: keep open on hover (desktop) */
+.nav-dropdown:hover .dropdown-menu {
   display: flex;
 }
 
@@ -104,13 +111,14 @@ body {
 }
 
 .dropdown-menu li a {
-  padding: 10px 18px;
+  padding: 9px 16px;
   display: block;
-  color: #333;
+  color: #3b2415;
+  font-size: 14px;
 }
 
 .dropdown-menu li a:hover {
-  background: #f5efed;
+  background: #f7ecde;
   color: #c04a3e;
 }
 
@@ -126,11 +134,11 @@ body {
   font-weight: 500;
 }
 
+/* (If someday you use logo in navbar right) */
 .nav-whatsapp img {
   height: 32px;
   cursor: pointer;
 }
-
 
 
 /* ============================================
@@ -153,7 +161,6 @@ body {
   width: 100%;
   height: 100%;
   opacity: 0;
-
   transition: opacity 0.8s ease;
 }
 
@@ -168,43 +175,89 @@ body {
 }
 
 
-
 /* ============================================
-   7 PRODUCT BOXES (HOME)
+   7 PRODUCT BOXES (HOME) – 4 + 3 GRID
 ============================================ */
 
 .product-boxes {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
+  max-width: 1100px;
+  margin: -55px auto 40px;   /* overlap slider */
+  padding: 0 40px;
 
-  padding: 10px 40px;
-  margin-top: -55px;       /* Slider ke upar overlap */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* first row 4, second row 3 automatically */
+  gap: 12px;
+
   position: relative;
   z-index: 50;
 }
 
+/* Each box as image card */
 .product-box {
-  background: #1b1b1b;
-  border: 2px solid #d0443c;
-  padding: 12px 8px;
-  border-radius: 6px;
-
-  text-align: center;
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 70%;              /* aspect ratio */
+  border-radius: 10px;
+  overflow: hidden;
+  background: #1b1b1b;           /* fallback */
+  background-size: cover;
+  background-position: center;
   text-decoration: none;
   color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Label at bottom of each box */
+.product-box span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
   font-size: 13px;
   font-weight: 600;
+  text-align: center;
 
-  transition: 0.2s;
+  padding: 8px 8px;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
 }
 
+/* Hover effect */
 .product-box:hover {
-  background: #c04a3e;
-  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
 }
 
+/* Background images for each product box (update names as per your files) */
+.product-boxes a:nth-child(1) {
+  background-image: url('images/afghani-almund-box.png');   /* Afghani Almonds */
+}
+
+.product-boxes a:nth-child(2) {
+  background-image: url('images/california-almund-box.png'); /* California Almonds */
+}
+
+.product-boxes a:nth-child(3) {
+  background-image: url('images/iranian-almund-box.png');    /* Iranian Almonds */
+}
+
+.product-boxes a:nth-child(4) {
+  background-image: url('images/kashmiri-almund-box.png');   /* Kashmiri Almonds */
+}
+
+.product-boxes a:nth-child(5) {
+  background-image: url('images/roasted-afghani-almund-box.png'); /* Roasted Afghani */
+}
+
+.product-boxes a:nth-child(6) {
+  background-image: url('images/roasted-afghani-mamra-almund-box.png'); /* Roasted Mamra */
+}
+
+.product-boxes a:nth-child(7) {
+  background-image: url('images/afghani-mamra-almund-box.png');      /* Afghani Mamra */
+}
 
 
 /* ============================================
@@ -212,7 +265,9 @@ body {
 ============================================ */
 
 .home-content {
-  padding: 50px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 40px 30px;
   line-height: 1.7;
 }
 
@@ -235,35 +290,54 @@ body {
   margin: 6px 0;
 }
 
-
-
 /* Middle Image */
+.home-image-section {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 0 40px;
+}
+
 .home-image-section img {
   width: 100%;
-  margin-top: 20px;
   border-radius: 10px;
 }
 
 
-
 /* ============================================
-   PRODUCT PAGE
+   PRODUCT PAGES – BANNERS & CONTENT
 ============================================ */
 
-.product-banner img {
+/* Top banner & mid banner style same */
+.product-banner,
+.product-mid-banner {
   width: 100%;
-  height: 350px;
-  object-fit: cover;
+  padding: 26px 0 10px;
+  background: #f8f0e6;
 }
 
+.product-banner img,
+.product-mid-banner img {
+  width: 100%;
+  max-width: 1200px;
+  height: 350px;
+  margin: 0 auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Main text area */
 .product-details {
-  padding: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 36px 40px;
 }
 
 .product-details h1 {
   font-size: 34px;
   font-weight: 700;
   margin-bottom: 18px;
+  color: #2b1a0f;
 }
 
 .short-desc {
@@ -272,7 +346,7 @@ body {
   margin-bottom: 25px;
 }
 
-
+/* Weights boxes */
 .weights-box span {
   font-size: 17px;
   font-weight: 600;
@@ -281,7 +355,8 @@ body {
 .weight-options {
   margin-top: 12px;
   display: flex;
-  gap: 14px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .weight {
@@ -293,8 +368,7 @@ body {
   font-weight: 600;
 }
 
-
-
+/* WhatsApp order button */
 .order-btn {
   display: inline-block;
   margin-top: 20px;
@@ -303,7 +377,7 @@ body {
   color: #fff;
   border-radius: 30px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -311,20 +385,21 @@ body {
   background: #a7372e;
 }
 
-
-/* Long description section */
+/* Long description block */
 .product-long-desc {
-  margin-top: 35px;
+  margin-top: 30px;
   line-height: 1.7;
 }
 
-.product-long-desc h2 {
-  margin-bottom: 15px;
-  font-size: 24px;
+.product-long-desc h2,
+.product-long-desc h3 {
+  margin-bottom: 12px;
+  font-size: 22px;
+  color: #2f1e12;
 }
 
 .product-long-desc ul {
-  margin: 12px 0;
+  margin: 12px 0 14px;
   padding-left: 22px;
 }
 
@@ -332,13 +407,32 @@ body {
   margin: 6px 0;
 }
 
-
-.product-bottom-img img {
-  width: 100%;
-  border-radius: 10px;
-  margin-top: 20px;
+/* Extra description block after mid-banner */
+.product-details.second-desc {
+  padding-top: 18px;
 }
 
+/* Special nutrition text section (if used) */
+.nutrition-text {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 0 40px 10px;
+  line-height: 1.8;
+}
+
+.nutrition-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.nutrition-text ul {
+  margin: 10px 0 12px;
+  padding-left: 22px;
+}
+
+.nutrition-text ul li {
+  margin: 5px 0;
+}
 
 
 /* ============================================
@@ -354,6 +448,8 @@ body {
 
 .about-content,
 .contact-section {
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 40px;
   line-height: 1.7;
 }
@@ -365,6 +461,26 @@ body {
   margin-bottom: 15px;
 }
 
+/* Small info cards on contact page (if any) */
+.contact-info-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.info-item {
+  background: #f8f0e6;
+  padding: 14px 16px;
+  border-radius: 8px;
+}
+
+.info-item h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+/* Contact bottom images */
 .about-image-bottom img,
 .contact-bottom-image img {
   width: 100%;
@@ -372,11 +488,11 @@ body {
   margin-top: 25px;
 }
 
-
-
 /* CONTACT FORM */
 .contact-form-section {
-  padding: 40px;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 0 40px;
 }
 
 .contact-form-section h2 {
@@ -392,11 +508,12 @@ body {
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
   padding: 12px 15px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .form-btn {
@@ -404,7 +521,7 @@ body {
   background: #c04a3e;
   border: none;
   color: white;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
@@ -415,7 +532,6 @@ body {
 }
 
 
-
 /* ============================================
    FOOTER
 ============================================ */
@@ -424,7 +540,7 @@ body {
   width: 100%;
   background: #1b1b1b;
   color: #ddd;
-  padding: 40px 40px;
+  padding: 40px 40px 30px;
 
   margin-top: 40px;
 
@@ -436,7 +552,7 @@ body {
 }
 
 .footer-left img {
-  height: 42px;
+  height: 48px;
   margin-bottom: 10px;
 }
 
@@ -453,22 +569,66 @@ body {
 
 .footer-right p {
   margin-bottom: 6px;
+  font-size: 13px;
 }
 
+/* ============================================
+   FLOATING WHATSAPP BUTTON (FIXED BOTTOM-RIGHT)
+============================================ */
 
+.whatsapp-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.whatsapp-float svg {
+  display: block;
+}
 
 /* ============================================
    RESPONSIVE
 ============================================ */
 
 @media (max-width: 900px) {
+  .top-header {
+    padding: 0 18px;
+  }
+
+  .main-nav .nav-links {
+    gap: 18px;
+  }
+
   .product-boxes {
+    padding: 0 20px;
     grid-template-columns: repeat(3, 1fr);
+    margin-top: -30px;
+  }
+
+  .home-content,
+  .home-image-section,
+  .product-details,
+  .nutrition-text,
+  .contact-form-section,
+  .about-content,
+  .contact-section {
+    padding: 28px 20px;
   }
 
   .footer {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
+    padding: 26px 20px 22px;
   }
 }
 
@@ -477,12 +637,26 @@ body {
     height: 260px;
   }
 
-  .product-banner img {
+  .product-banner img,
+  .product-mid-banner img {
     height: 260px;
   }
 
   .product-boxes {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
+  .home-content h1,
+  .about-content h1,
+  .contact-section h1 {
+    font-size: 26px;
+  }
+
+  .product-details h1 {
+    font-size: 26px;
+  }
+
+  .nav-contact {
+    display: none; /* mobile me thoda clean rakho */
+  }
+}
