@@ -21,7 +21,7 @@ body {
 .top-header {
   width: 100%;
   height: 70px;
-  background: #3b2415;              /* dark brown */
+  background: #3A2314;              /* dark brown */
   padding: 0 40px;
 
   display: flex;
@@ -42,7 +42,7 @@ body {
 }
 
 .nav-logo img {
-  height: 56px;                     /* navbar logo bigger, almost full height */
+  height: 72px;                     /* navbar logo bigger, almost full height */
 }
 
 .nav-logo span {
@@ -62,7 +62,7 @@ body {
 .nav-links a {
   text-decoration: none;
   font-size: 16px;
-  color: #f9e7c9;
+  color: #F7E5C0;
   font-weight: 500;
   transition: 0.2s;
 }
@@ -543,7 +543,7 @@ body {
 
 .footer {
   width: 100%;
-  background: #3b2415;        /* same as navbar */
+  background: #3A2314;        /* same as navbar */
   color: #f9e7c9;
   padding: 40px 40px 30px;
 
@@ -557,7 +557,7 @@ body {
 }
 
 .footer-left img {
-  height: 56px;               /* footer logo same style as navbar */
+  height: 72px;               /* footer logo same style as navbar */
   margin-bottom: 10px;
 }
 
@@ -575,6 +575,7 @@ body {
 .footer-right p {
   margin-bottom: 6px;
   font-size: 13px;
+   color: #F7E5C0;
 }
 
 
