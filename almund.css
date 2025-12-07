@@ -42,7 +42,7 @@ body {
 }
 
 .nav-logo img {
-  height: 42px;                     /* thoda bada */
+  height: 56px;                     /* navbar logo bigger, almost full height */
 }
 
 .nav-logo span {
@@ -177,7 +177,7 @@ body {
 .product-boxes {
   width: 100%;
   max-width: 1100px;
-  margin: -55px auto 40px;   /* overlap slider */
+  margin: -55px auto 40px;   /* overlap slider, center column */
   padding: 0 40px;
 
   display: grid;
@@ -193,7 +193,7 @@ body {
   position: relative;
   display: block;
   width: 100%;
-  padding-top: 70%;              /* aspect ratio */
+  padding-top: 75%;              /* thoda taller */
   border-radius: 10px;
   overflow: hidden;
   background: #111;              /* fallback */
@@ -237,7 +237,7 @@ body {
   background-image: url('images/california-almund-mid-banner.png');
 }
 
-/* 3: Iranian / Irani Almonds */
+/* 3: Iranian Almonds */
 .product-boxes a:nth-child(3) {
   background-image: url('images/iran-almund-banner.png');
 }
@@ -259,7 +259,7 @@ body {
 
 /* 7: Afghani Mamra Almonds */
 .product-boxes a:nth-child(7) {
-  background-image: url('images/Afghani-mamra-banner.jpg');
+  background-image: url('images/afghani-mamra-banner.jpg'); /* file name exact same hona chahiye */
 }
 
 
@@ -272,6 +272,7 @@ body {
   margin: 0 auto;
   padding: 50px 40px 30px;
   line-height: 1.7;
+  text-align: left;
 }
 
 .home-content h1 {
@@ -310,30 +311,28 @@ body {
    PRODUCT PAGES – BANNERS & CONTENT
 ============================================ */
 
-/* Top banner & mid banner style same */
+/* Top banner & mid banner – full width like Contact Us */
 .product-banner,
 .product-mid-banner {
   width: 100%;
-  padding: 26px 0 10px;
   background: #f8f0e6;
 }
 
 .product-banner img,
 .product-mid-banner img {
   width: 100%;
-  max-width: 1200px;
   height: 350px;
-  margin: 0 auto;
   display: block;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 0;          /* same look as contact/banner (no inner rounding) */
 }
 
-/* Main text area */
+/* Main text area – left aligned column, centre me placed */
 .product-details {
   max-width: 1100px;
   margin: 0 auto;
   padding: 36px 40px;
+  text-align: left;
 }
 
 .product-details h1 {
@@ -392,6 +391,7 @@ body {
 .product-long-desc {
   margin-top: 30px;
   line-height: 1.7;
+  text-align: left;
 }
 
 .product-long-desc h2,
@@ -421,6 +421,7 @@ body {
   margin: 0 auto 40px;
   padding: 0 40px 10px;
   line-height: 1.8;
+  text-align: left;
 }
 
 .nutrition-text h2 {
@@ -455,6 +456,7 @@ body {
   margin: 0 auto;
   padding: 40px;
   line-height: 1.7;
+  text-align: left;
 }
 
 .about-content h1,
@@ -536,13 +538,13 @@ body {
 
 
 /* ============================================
-   FOOTER
+   FOOTER  (same colour as navbar)
 ============================================ */
 
 .footer {
   width: 100%;
-  background: #1b1b1b;
-  color: #ddd;
+  background: #3b2415;        /* same as navbar */
+  color: #f9e7c9;
   padding: 40px 40px 30px;
 
   margin-top: 40px;
@@ -555,19 +557,19 @@ body {
 }
 
 .footer-left img {
-  height: 52px;                    /* footer logo thoda bada */
+  height: 56px;               /* footer logo same style as navbar */
   margin-bottom: 10px;
 }
 
 .footer-center a {
   display: block;
-  color: #ddd;
+  color: #f9e7c9;
   text-decoration: none;
   margin-bottom: 8px;
 }
 
 .footer-center a:hover {
-  color: #c04a3e;
+  color: #ffb188;
 }
 
 .footer-right p {
@@ -584,8 +586,8 @@ body {
   position: fixed;
   right: 18px;
   bottom: 18px;
-  width: 52px;                     /* size bada */
-  height: 52px;
+  width: 56px;                     /* size bada */
+  height: 56px;
   border-radius: 50%;
   background: #25d366;
   display: flex;
@@ -597,6 +599,8 @@ body {
 }
 
 .whatsapp-float svg {
+   width: 28px;
+  height: 28px;
   display: block;
 }
 
@@ -643,8 +647,10 @@ body {
   }
 
   .product-banner img,
-  .product-mid-banner img {
-    height: 260px;
+  .product-mid-banner img,
+  .about-banner img,
+  .contact-banner img {
+    height: 260px;        /* mobile me dono banner same height */
   }
 
   .product-boxes {
