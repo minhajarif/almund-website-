@@ -587,8 +587,8 @@ body {
 .whatsapp-float {
   position: fixed;
   right: 18px;
-  bottom: 30px;
-  width: 70px;                     /* size bada */
+  bottom: 19px;
+  width: 55px;                     /* size bada */
   height: 570px;
   border-radius: 50%;
   background: #25d366;
@@ -601,8 +601,8 @@ body {
 }
 
 .whatsapp-float svg {
-   width: 28px;
-  height: 28px;
+   width: 20px;
+  height: 20px;
   display: block;
 }
 
