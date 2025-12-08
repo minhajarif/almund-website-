@@ -45,12 +45,6 @@ body {
   height: 110px;                     /* navbar logo bigger, almost full height */
 }
 
-.nav-logo span {
-  font-size: 23px;
-  font-weight: 700;
-  color: #f9e7c9;                   /* light almond text */
-}
-
 /* Navbar Center Menu */
 .main-nav .nav-links {
   list-style: none;
@@ -176,12 +170,13 @@ body {
 
 .product-boxes {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   max-width: 1100px;
   margin: -55px auto 40px;   /* overlap slider, center column */
   padding: 0 40px;
 
-  display: grid;
+  display: block;
   grid-template-columns: repeat(4, 1fr);  /* 1st row 4, 2nd row 3 */
   gap: 12px;
 
@@ -263,11 +258,6 @@ body {
   background-image: url('images/afghani-mamra-top-banner.png'); /* file name exact same hona chahiye */
 }
 
-
-/* ============================================
-   HOME CONTENT
-============================================ */
-
 .home-content {
   max-width: 1100px;
   margin: 0 auto;
@@ -307,10 +297,6 @@ body {
   border-radius: 10px;
 }
 
-
-/* ============================================
-   PRODUCT PAGES – BANNERS & CONTENT
-============================================ */
 
 /* Top banner & mid banner – full width like Contact Us */
 .product-banner,
@@ -447,11 +433,6 @@ body {
   margin: 5px 0;
 }
 
-
-/* ============================================
-   ABOUT & CONTACT PAGE SECTIONS
-============================================ */
-
 .about-banner img,
 .contact-banner img {
   width: 100%;
@@ -546,10 +527,6 @@ body {
 }
 
 
-/* ============================================
-   FOOTER  (same colour as navbar)
-============================================ */
-
 .footer {
   width: 100%;
   background: #3A2314;        /* same as navbar */
@@ -587,11 +564,6 @@ body {
    color: #F7E5C0;
 }
 
-
-/* ============================================
-   FLOATING WHATSAPP BUTTON (FIXED BOTTOM-RIGHT)
-============================================ */
-
 .whatsapp-float {
   position: fixed;
   right: 20px;
@@ -614,10 +586,6 @@ body {
   display: block;
 }
 
-
-/* ============================================
-   RESPONSIVE
-============================================ */
 
 @media (max-width: 900px) {
   .top-header {
