@@ -169,8 +169,7 @@ body {
 ============================================ */
 
 .product-boxes {
-  width: 100%;
-  height: auto;
+
   max-width: 1100px;
   margin: -55px auto 40px;   /* overlap slider, center column */
   padding: 0 40px;
@@ -192,7 +191,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   background: #111;              /* fallback */
-  background-size: contain;      /* FULL image, no crop */
+  background-size: cover;      /* FULL image, no crop */
   background-repeat: no-repeat;
   background-position: center;
   text-decoration: none;
