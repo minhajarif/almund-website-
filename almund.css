@@ -42,7 +42,7 @@ body {
 }
 
 .nav-logo img {
-  height: 90px;                     /* navbar logo bigger, almost full height */
+  height: 110px;                     /* navbar logo bigger, almost full height */
 }
 
 .nav-logo span {
@@ -558,7 +558,7 @@ body {
 }
 
 .footer-left img {
-  height: 90px;               /* footer logo same style as navbar */
+  height: 120px;               /* footer logo same style as navbar */
   margin-bottom: 10px;
 }
 
@@ -586,10 +586,10 @@ body {
 
 .whatsapp-float {
   position: fixed;
-  right: 18px;
-  bottom: 19px;
-  width: 55px;                     /* size bada */
-  height: 570px;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;                     /* size bada */
+  height: 60px;
   border-radius: 50%;
   background: #25d366;
   display: flex;
